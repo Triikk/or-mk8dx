@@ -166,7 +166,7 @@ var gliders: best_glider;
 %                             tire_statistics[best_tire, s] + 
 %                             glider_statistics[best_glider, s] | s in statistics]);
 
-% speed (1) + acceleration (2) + avg(traction) (3,4) + avg(speed) (5,6,7,8) + avg(handling) (9,10,11,12)
+% speed (1) + acceleration (2) + avg(traction) (3,4) + mini turbo (5) + avg(speed) (6,7,8,9) + avg(handling) (10,11,12,13)
 var int: total_statistics = 
     driver_statistics[best_driver, 1] + body_statistics[best_body, 1] + tire_statistics[best_tire, 1] + glider_statistics[best_glider, 1] +
     
