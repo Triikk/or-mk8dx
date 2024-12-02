@@ -1,0 +1,206 @@
+int: n_drivers = 52;
+int: n_bodies = 41;
+int: n_tires = 22;
+int: n_gliders = 15;
+int: n_statistics = 14;
+
+set of int: drivers = 1..n_drivers;
+set of int: bodies = 1..n_bodies;
+set of int: tires = 1..n_tires;
+set of int: gliders = 1..n_gliders;
+set of int: statistics = 1..n_statistics;
+
+array[drivers] of string: driver_names = ["Mario", "Luigi", "Peach", "Daisy", "Yoshi", "Toad", "Toadette", "Koopa Troopa", "Bowser", "Donkey Kong", "Wario", "Waluigi", "Rosalina", "Metal Mario", "Pink Gold Peach", "Lakitu", "Shy Guy", "Baby Mario", "Baby Luigi", "Baby Peach", "Baby Daisy", "Baby Rosalina", "Larry", "Lemmy", "Wendy", "Ludwig", "Iggy", "Roy", "Morton", "Mii (medium)", "Tanooki Mario", "Link", "Villager (male)", "Isabelle", "Cat Peach", "Dry Bowser", "Villager (female)", "Gold Mario", "Dry Bones", "Bowser Jr.", "King Boo", "Inkling Girl", "Inkling Boy", "Link (Breath of the Wild)", "Birdo", "Kamek", "Petey Piranha", "Wiggler", "Diddy Kong", "Funky Kong", "Peachette", "Pauline"];
+
+array[bodies] of string: body_names = ["Standard Kart", "Pipe Frame", "Mach 8", "Steel Driver", "Cat Cruiser", "Circuit Special", "Tri-Speeder", "Badwagon", "Prancer", "Biddybuggy", "Landship", "Sneeker", "Sports Coupe", "Gold Standard", "Standard Bike", "Comet", "Sport Bike", "The Duke", "Flame Rider", "Varmint", "Mr. Scooty", "Jet Bike", "Yoshi Bike", "Standard ATV", "Wild Wiggler", "Teddy Buggy", "GLA", "W 25 Silver Arrow", "300 SL Roadster", "Blue Falcon", "Tanooki Kart", "B Dasher", "Master Cycle", "Streetle", "P-Wing", "City Tripper", "Bone Rattler", "Koopa Clown", "Splat Buggy", "Inkstriker", "Master Cycle Zero"];
+
+array[tires] of string: tire_names = ["Standard", "Monster", "Roller", "Slim", "Slick", "Metal", "Button", "Off-Road", "Sponge", "Wood", "Cushion", "Blue Standard", "Hot Monster", "Azure Roller", "Crimson Slim", "Cyber Slick", "Retro Off-Road", "Gold Tires", "GLA Tires", "Triforce Tires", "Leaf Tires", "Ancient Tires"];
+
+array[gliders] of string: glider_names = ["Super Glider", "Cloud Glider", "Wario Wing", "Waddle Wing", "Peach Parasol", "Parachute", "Parafoil", "Flower Glider", "Bowser Kite", "Plane Glider", "MKTV Parafoil", "Gold Glider", "Hylian Kite", "Paper Glider", "Paraglider"];
+
+array[drivers, statistics] of int: driver_statistics = [|6,2,4,2,3,7,7,7,7,4,4,4,4,3
+|6,2,5,1,3,7,7,7,7,5,5,5,5,3
+|4,3,3,3,4,6,6,6,6,5,5,5,5,1
+|4,3,3,3,4,6,6,6,6,5,5,5,5,1
+|4,3,3,3,4,6,6,6,6,5,5,5,5,1
+|3,4,3,4,4,4,4,4,4,7,7,7,7,3
+|2,5,4,2,4,3,3,3,3,7,7,7,7,3
+|2,4,1,5,4,3,3,3,3,8,8,8,8,4
+|10,0,6,0,0,10,10,10,10,0,0,0,0,6
+|8,1,10,0,1,9,9,9,9,2,2,2,2,4
+|9,0,5,1,0,10,10,10,10,1,1,1,1,5
+|8,1,10,0,1,9,9,9,9,2,2,2,2,4
+|7,1,9,3,2,8,8,8,8,3,3,3,3,4
+|10,1,8,1,1,8,8,8,8,3,3,3,3,3
+|10,1,8,1,1,8,8,8,8,3,3,3,3,3
+|2,4,1,5,4,3,3,3,3,8,8,8,8,4
+|3,4,3,4,4,4,4,4,4,7,7,7,7,3
+|1,5,2,4,5,2,2,2,2,8,8,8,8,5
+|1,5,2,4,5,2,2,2,2,8,8,8,8,5
+|0,4,3,5,5,1,1,1,1,10,10,10,10,6
+|0,4,3,5,5,1,1,1,1,10,10,10,10,6
+|0,5,4,3,5,1,1,1,1,9,9,9,9,6
+|3,4,3,4,4,4,4,4,4,7,7,7,7,3
+|0,5,4,3,5,1,1,1,1,9,9,9,9,6
+|2,5,4,2,4,3,3,3,3,7,7,7,7,3
+|6,2,4,2,3,7,7,7,7,4,4,4,4,3
+|6,2,5,1,3,7,7,7,7,5,5,5,5,3
+|8,1,10,0,1,9,9,9,9,2,2,2,2,4
+|10,0,6,0,0,10,10,10,10,0,0,0,0,6
+|6,2,4,2,3,7,7,7,7,4,4,4,4,3
+|5,3,7,1,4,6,6,6,6,5,5,5,5,1
+|7,1,9,3,2,8,8,8,8,3,3,3,3,4
+|5,3,7,1,4,6,6,6,6,5,5,5,5,1
+|2,5,4,2,4,3,3,3,3,7,7,7,7,3
+|3,4,2,3,4,5,5,5,5,6,6,6,6,3
+|9,0,5,1,0,10,10,10,10,1,1,1,1,5
+|3,4,2,3,4,5,5,5,5,6,6,6,6,3
+|10,1,8,1,1,8,8,8,8,3,3,3,3,3
+|1,5,2,4,5,2,2,2,2,8,8,8,8,5
+|2,4,1,5,4,3,3,3,3,8,8,8,8,4
+|7,1,9,3,2,8,8,8,8,3,3,3,3,4
+|3,4,2,3,4,5,5,5,5,6,6,6,6,3
+|5,3,7,1,4,6,6,6,6,5,5,5,5,1
+|7,1,9,3,2,8,8,8,8,3,3,3,3,4
+|4,3,3,3,4,6,6,6,6,5,5,5,5,1
+|6,2,5,1,3,7,7,7,7,5,5,5,5,3
+|10,1,8,1,1,8,8,8,8,3,3,3,3,6
+|8,1,10,0,1,9,9,9,9,2,2,2,2,4
+|3,4,2,3,4,5,5,5,5,6,6,6,6,3
+|9,0,5,1,0,10,10,10,10,1,1,1,1,5
+|4,3,3,3,4,6,6,6,6,5,5,5,5,1
+|7,1,9,3,2,8,8,8,8,3,3,3,3,4
+|];
+
+array[bodies, statistics] of int: body_statistics = [|2,4,3,3,5,3,3,3,3,3,2,3,3,3
+|1,6,3,4,6,2,3,1,1,5,4,4,2,3
+|3,3,2,4,5,3,3,5,4,2,2,4,2,3
+|4,1,1,3,3,4,5,2,0,1,5,1,1,6
+|2,5,4,3,6,2,2,3,4,4,2,3,4,3
+|3,1,3,1,3,5,1,4,2,1,1,2,0,6
+|4,1,1,3,3,4,5,2,0,1,5,1,1,6
+|4,0,2,5,3,5,2,3,1,0,1,1,0,7
+|1,2,1,2,4,4,3,3,3,3,3,2,3,5
+|0,7,1,4,7,0,1,2,1,5,4,5,4,0
+|0,6,0,6,6,2,5,0,2,4,5,2,3,2
+|2,2,1,0,4,4,2,3,3,3,2,3,2,5
+|3,3,2,4,5,3,3,5,4,2,2,4,2,3
+|2,2,1,0,4,4,2,3,3,3,2,3,2,4
+|1,5,3,5,5,2,2,4,3,4,3,4,3,4
+|2,5,4,3,6,2,2,3,4,4,2,3,4,2
+|1,2,1,2,4,4,3,3,3,3,3,2,3,3
+|2,4,3,3,5,3,3,3,3,3,2,3,3,3
+|1,5,3,5,5,2,2,4,3,4,3,4,3,4
+|1,6,3,4,6,2,3,1,1,5,4,4,2,2
+|0,7,1,4,7,0,1,2,1,5,4,5,4,0
+|1,2,1,2,4,4,3,3,3,3,3,2,3,3
+|2,5,4,3,6,2,2,3,4,4,2,3,4,2
+|4,0,2,5,3,5,2,3,1,0,1,1,0,6
+|1,5,3,5,5,2,2,4,3,4,3,4,3,4
+|2,5,4,3,6,2,2,3,4,4,2,3,4,1
+|4,0,2,5,3,5,2,3,1,0,1,1,0,7
+|1,5,3,5,5,2,2,4,3,4,3,4,3,4
+|2,4,3,3,5,3,3,3,3,3,2,3,3,4
+|0,3,1,3,4,4,2,4,3,2,3,5,1,4
+|3,2,4,7,5,3,4,3,3,4,4,3,3,4
+|3,1,3,1,3,5,1,4,2,1,1,2,0,6
+|2,2,1,0,4,4,2,3,3,3,2,3,2,3
+|0,6,0,6,6,2,5,0,2,4,5,2,3,3
+|3,1,3,1,3,5,1,4,2,1,1,2,0,6
+|1,6,3,4,6,2,3,1,1,5,4,4,2,2
+|4,1,1,3,3,4,5,2,0,1,5,1,1,5
+|3,2,4,7,5,3,4,3,3,4,4,3,3,3
+|0,3,1,3,4,4,2,4,3,2,3,5,1,3
+|3,3,2,4,5,3,3,5,4,2,2,4,2,1
+|3,2,4,7,5,3,4,3,3,4,4,3,3,3
+|];
+
+array[tires, statistics] of int: tire_statistics = [|2,4,2,5,4,2,3,2,3,3,3,3,3,4
+|4,2,3,7,3,3,2,2,1,0,1,0,1,6
+|0,6,0,4,6,0,3,0,3,4,4,4,4,0
+|2,2,4,1,3,3,2,4,2,4,4,3,4,5
+|3,1,4,0,2,4,0,4,0,2,0,2,1,5
+|4,0,1,2,2,4,3,1,2,2,2,1,0,6
+|0,5,1,3,5,1,2,2,2,3,3,4,2,3
+|3,3,3,6,3,3,4,2,1,1,1,2,2,6
+|1,4,2,6,5,1,1,1,4,2,1,2,3,4
+|2,2,4,1,3,3,2,4,2,4,4,3,4,5
+|1,4,2,6,5,1,1,1,4,2,1,2,3,6
+|2,4,2,5,4,2,3,2,3,3,3,3,3,4
+|4,2,3,7,3,3,2,2,1,0,1,0,1,6
+|0,6,0,4,6,0,3,0,3,4,4,4,4,0
+|2,2,4,1,3,3,2,4,2,4,4,3,4,5
+|3,1,4,0,2,4,0,4,0,2,0,2,1,5
+|3,3,3,6,3,3,4,2,1,1,1,2,2,6
+|4,0,1,2,2,4,3,1,2,2,2,1,0,5
+|2,4,2,5,4,2,3,2,3,3,3,3,3,5
+|3,3,3,6,3,3,4,2,1,1,1,2,2,5
+|0,5,1,3,5,1,2,2,2,3,3,4,2,3
+|4,2,3,7,3,3,2,2,1,0,1,0,1,5
+|];
+
+array[gliders, statistics] of int: glider_statistics = [|1,1,1,1,1,1,1,0,2,1,0,1,1,1
+|0,2,1,1,2,0,1,1,1,1,0,1,2,0
+|2,1,2,0,1,1,0,1,2,1,1,0,1,1
+|1,1,1,1,1,1,1,0,2,1,0,1,1,1
+|1,2,2,0,2,0,0,1,1,1,1,0,2,0
+|0,2,1,1,2,0,1,1,1,1,0,1,2,0
+|1,2,2,0,2,0,0,1,1,1,1,0,2,0
+|0,2,1,1,2,0,1,1,1,1,0,1,2,0
+|1,2,2,0,2,0,0,1,1,1,1,0,2,0
+|2,1,2,0,1,1,0,1,2,1,1,0,1,1
+|1,2,2,0,2,0,0,1,1,1,1,0,2,0
+|2,1,2,0,1,1,0,1,2,1,1,0,1,1
+|1,1,1,1,1,1,1,0,2,1,0,1,1,1
+|0,2,1,1,2,0,1,1,1,1,0,1,2,0
+|2,1,2,0,1,1,0,1,2,1,1,0,1,1
+|];
+
+var drivers: best_driver;
+var bodies: best_body;
+var tires: best_tire;
+var gliders: best_glider;
+
+% var int: total_statistics = sum([driver_statistics[best_driver, s] + 
+%                             body_statistics[best_body, s] + 
+%                             tire_statistics[best_tire, s] + 
+%                             glider_statistics[best_glider, s] | s in statistics]);
+
+% speed (1) + acceleration (2) + avg(traction) (3,4) + avg(speed) (5,6,7,8) + avg(handling) (9,10,11,12)
+var int: total_statistics = 
+    driver_statistics[best_driver, 1] + body_statistics[best_body, 1] + tire_statistics[best_tire, 1] + glider_statistics[best_glider, 1] +
+    
+    driver_statistics[best_driver, 2] +  body_statistics[best_body, 2] + tire_statistics[best_tire, 2] + glider_statistics[best_glider, 2] +
+    
+    (driver_statistics[best_driver, 3] + body_statistics[best_body, 3] + tire_statistics[best_tire, 3] + glider_statistics[best_glider, 3] +
+    driver_statistics[best_driver, 4] + body_statistics[best_body, 4] + tire_statistics[best_tire, 4] + glider_statistics[best_glider, 4]) div 2 +
+    
+    driver_statistics[best_driver, 5] + body_statistics[best_body, 5] + tire_statistics[best_tire, 5] + glider_statistics[best_glider, 5] +
+    
+    (driver_statistics[best_driver, 6] + body_statistics[best_body, 6] + tire_statistics[best_tire, 6] + glider_statistics[best_glider, 6] +
+    driver_statistics[best_driver, 7] + body_statistics[best_body, 7] + tire_statistics[best_tire, 7] + glider_statistics[best_glider, 7] +
+    driver_statistics[best_driver, 8] + body_statistics[best_body, 8] + tire_statistics[best_tire, 8] + glider_statistics[best_glider, 8] +
+    driver_statistics[best_driver, 9] + body_statistics[best_body, 9] + tire_statistics[best_tire, 9] + glider_statistics[best_glider, 9]) div 4 +
+    
+    (driver_statistics[best_driver, 10] + body_statistics[best_body, 10] + tire_statistics[best_tire, 10] + glider_statistics[best_glider, 10] +
+    driver_statistics[best_driver, 11] + body_statistics[best_body, 11] + tire_statistics[best_tire, 11] + glider_statistics[best_glider, 11] +
+    driver_statistics[best_driver, 12] + body_statistics[best_body, 12] + tire_statistics[best_tire, 12] + glider_statistics[best_glider, 12] +
+    driver_statistics[best_driver, 13] + body_statistics[best_body, 13] + tire_statistics[best_tire, 13] + glider_statistics[best_glider, 13]) div 4;
+
+constraint
+    forall(s in statistics) (
+        driver_statistics[best_driver, s] + 
+        body_statistics[best_body, s] + 
+        tire_statistics[best_tire, s] + 
+        glider_statistics[best_glider, s] <= 20
+    );
+
+solve maximize total_statistics;
+
+output [
+    "Best Driver: ", driver_names[fix(best_driver)], "\n",
+    "Best Body: ", body_names[fix(best_body)], "\n",
+    "Best Tire: ", tire_names[fix(best_tire)], "\n",
+    "Best Glider: ", glider_names[fix(best_glider)], "\n",
+    "Total Stats: ", show(total_statistics), "\n"
+];
