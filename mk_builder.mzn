@@ -1,4 +1,20 @@
-include "mk8dx_data.dzn";
+int: n_drivers;
+int: n_bodies;
+int: n_tires;
+int: n_gliders;
+int: n_statistics;
+
+array[drivers] of string: driver_names;
+array[bodies] of string: body_names;
+array[tires] of string: tire_names;
+array[gliders] of string: glider_names;
+
+array[drivers, statistics] of int: driver_statistics;
+array[bodies, statistics] of int: body_statistics;
+array[tires, statistics] of int: tire_statistics;
+array[gliders, statistics] of int: glider_statistics;
+
+var int: objective_function;
 
 set of int: drivers = 1..n_drivers;
 set of int: bodies = 1..n_bodies;
