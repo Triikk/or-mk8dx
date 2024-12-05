@@ -159,11 +159,11 @@ traction_value = (driver_statistics[best_driver, 3] + body_statistics[best_body,
 traction_factor = 1.0;
 mini_turbo_value = (driver_statistics[best_driver, 5] + body_statistics[best_body, 5] + tire_statistics[best_tire, 5] + glider_statistics[best_glider, 5]);
 mini_turbo_factor = 8.0;
-speed_value = (0.7*(driver_statistics[best_driver, 6] + body_statistics[best_body, 6] + tire_statistics[best_tire, 6] + glider_statistics[best_glider, 6]) +
-    0.1*(driver_statistics[best_driver, 7] + body_statistics[best_body, 7] + tire_statistics[best_tire, 7] + glider_statistics[best_glider, 7]) +
-    0.1*(driver_statistics[best_driver, 8] + body_statistics[best_body, 8] + tire_statistics[best_tire, 8] + glider_statistics[best_glider, 8]) +
-    0.1*(driver_statistics[best_driver, 9] + body_statistics[best_body, 9] + tire_statistics[best_tire, 9] + glider_statistics[best_glider, 9])) / 4;
-speed_factor = 20.0;
+speed_value = (2.8*(driver_statistics[best_driver, 6] + body_statistics[best_body, 6] + tire_statistics[best_tire, 6] + glider_statistics[best_glider, 6]) +
+    0.4*(driver_statistics[best_driver, 7] + body_statistics[best_body, 7] + tire_statistics[best_tire, 7] + glider_statistics[best_glider, 7]) +
+    0.4*(driver_statistics[best_driver, 8] + body_statistics[best_body, 8] + tire_statistics[best_tire, 8] + glider_statistics[best_glider, 8]) +
+    0.4*(driver_statistics[best_driver, 9] + body_statistics[best_body, 9] + tire_statistics[best_tire, 9] + glider_statistics[best_glider, 9])) / 4;
+speed_factor = 5.0;
 handling_value = (driver_statistics[best_driver, 10] + body_statistics[best_body, 10] + tire_statistics[best_tire, 10] + glider_statistics[best_glider, 10] +
     driver_statistics[best_driver, 11] + body_statistics[best_body, 11] + tire_statistics[best_tire, 11] + glider_statistics[best_glider, 11] +
     driver_statistics[best_driver, 12] + body_statistics[best_body, 12] + tire_statistics[best_tire, 12] + glider_statistics[best_glider, 12] +
